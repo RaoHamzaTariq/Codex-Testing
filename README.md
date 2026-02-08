@@ -32,6 +32,7 @@ orchestrator.py       # Claude Code orchestrator + stop-hook loop
 retry_handler.py      # Retry utilities
 weekly_audit.py       # Weekly CEO briefing generator
 frontend/             # React + Tailwind control center
+backend/              # FastAPI control center API
 ```
 
 ## Testing Scenario
