@@ -21,6 +21,9 @@ This repository delivers a local-first, agentic system that uses Claude Code for
 2. Open `AI_Employee_Vault/` as an Obsidian vault (optional but recommended).
 3. Start the orchestrator and any watchers you’ve configured.
 
+## Web Dashboard
+The React control center lives in `frontend/` and mirrors the vault state with real-time UI primitives and approval controls. See `SETUP.md` for how to run it locally.
+
 ## Repository Layout
 ```
 AI_Employee_Vault/    # Obsidian vault
@@ -28,6 +31,7 @@ base_watcher.py       # Abstract watcher class
 orchestrator.py       # Claude Code orchestrator + stop-hook loop
 retry_handler.py      # Retry utilities
 weekly_audit.py       # Weekly CEO briefing generator
+frontend/             # React + Tailwind control center
 ```
 
 ## Testing Scenario

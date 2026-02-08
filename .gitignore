@@ -4,3 +4,5 @@ __pycache__/
 AI_Employee_Vault/Logs/*.json
 AI_Employee_Vault/**/Current_Month.md
 whatsapp_session.json
+frontend/node_modules/
+frontend/dist/

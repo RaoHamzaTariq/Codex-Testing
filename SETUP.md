@@ -60,19 +60,27 @@ python whatsapp_watcher.py
 python finance_watcher.py
 ```
 
-## 7) Approval Workflow
+## 7) Run the Web Dashboard (React + Tailwind)
+```bash
+cd frontend
+npm install
+npm run dev
+```
+Then open the URL printed by Vite (usually `http://localhost:5173`).
+
+## 8) Approval Workflow
 1. Sensitive actions are written to `AI_Employee_Vault/Pending_Approval/`.
 2. Approve by moving files to `AI_Employee_Vault/Approved/`.
 3. Reject by moving files to `AI_Employee_Vault/Rejected/`.
 
-## 8) Weekly CEO Briefing
+## 9) Weekly CEO Briefing
 Run the briefing generator manually:
 ```bash
 python weekly_audit.py
 ```
 Briefings are created under `AI_Employee_Vault/Briefings/`.
 
-## 9) PM2 (Optional Production Supervisor)
+## 10) PM2 (Optional Production Supervisor)
 ```bash
 pm2 start orchestrator.py --interpreter python3 --name "orchestrator"
 pm2 start gmail_watcher.py --interpreter python3 --name "gmail-watcher"
@@ -82,7 +90,7 @@ pm2 save
 pm2 startup
 ```
 
-## 10) End-to-End Invoice Flow Test
+## 11) End-to-End Invoice Flow Test
 1. Simulate a WhatsApp message with keyword `invoice`.
 2. Confirm the watcher creates `Needs_Action/WHATSAPP_*.md`.
 3. Orchestrator triggers Claude to create a plan in `Plans/`.
